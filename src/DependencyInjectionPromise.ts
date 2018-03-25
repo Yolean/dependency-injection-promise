@@ -9,17 +9,12 @@ export default class DependencyInjectionPromise<T> extends Promise<T> {
   constructor() {
     let captureResolve: (value?: T | PromiseLike<T>) => void;
     let captureReject: (reason?: any) => void;
-    const executor: (
-      resolve: (value?: T | PromiseLike<T>) => void,
-      reject: (reason?: any) => void
-    ) => void = function(resolve, reject) {
+    super((resolve, reject) => {
       captureResolve = resolve;
       captureReject = reject;
-    }
-    super(executor);
+    });
     this.resolve = captureResolve;
     this.reject = captureReject;
-    console.log('Got resolve and reject now', this.resolve, this.reject);
   }
 
   providerRegister(executor: (
