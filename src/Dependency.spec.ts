@@ -1,4 +1,4 @@
-import { Dependency, DependencyLazy, DependencyPromise } from './DependencyInjectionPromise';
+import { Dependency, DependencyLazy, DependencyPromise } from './Dependency';
 
 describe("DependencyPromise", () => {
 
