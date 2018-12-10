@@ -117,7 +117,7 @@ describe("DependencyInjectionLazy", () => {
     }
 
     it("Type declarations are ok with a promise from new without generic type", () => {
-      let p = new DependencyPromise((resolve, reject) => {
+      let p = new DependencyPromise<string>((resolve, reject) => {
         resolve("Resolved!");
       });
       receiver(p);
