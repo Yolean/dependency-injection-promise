@@ -26,9 +26,9 @@ describe("DependencyPromise", () => {
 
 describe("DependencyInjectionLazy", () => {
 
-  xit("The only type of dependency injection we do is lazy singleton");
+  xit("The only type of dependency injection we do is lazy singleton", () => {});
 
-  xit("Transitive dependencies are not injected, which means the lib has no opinion about constructor/setter injection");
+  xit("Transitive dependencies are not injected, which means the lib has no opinion about constructor/setter injection", () => {});
 
   describe("Promise-like API", () => {
 

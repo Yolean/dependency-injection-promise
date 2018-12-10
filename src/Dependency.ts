@@ -25,7 +25,7 @@ export class DependencyLazy<T> implements Dependency<T> {
     this.executor = executor;
   }
 
-  // https://github.com/Microsoft/TypeScript/blob/v2.8.1/lib/lib.es5.d.ts#L1305
+  // https://github.com/Microsoft/TypeScript/blob/v2.9.2/lib/lib.es5.d.ts#L1323
   then<TResult1 = T, TResult2 = never>(onfulfilled?: ((value: T) => TResult1 | PromiseLike<TResult1>) | undefined | null, onrejected?: ((reason: any) => TResult2 | PromiseLike<TResult2>) | undefined | null): PromiseLike<TResult1 | TResult2> {
     if (this.executor === null) throw new Error('No dependency provider has been set');
     if (this.promise === null) {

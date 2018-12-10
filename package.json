@@ -9,10 +9,11 @@
   "author": "Staffan Olsson, Yolean AB",
   "license": "MIT",
   "devDependencies": {
-    "jest": "22.4.3",
-    "ts-jest": "22.4.2",
-    "ts-node": "5.0.1",
-    "typescript": "2.7.2"
+    "@types/jest": "23.3.10",
+    "jest": "23.6.0",
+    "ts-jest": "23.10.5",
+    "ts-node": "7.0.1",
+    "typescript": "2.8.3"
   },
   "jest": {
     "transform": {
