@@ -108,4 +108,22 @@ describe("DependencyInjectionLazy", () => {
 
   });
 
+  describe("Instantiation as-is", () => {
+
+    let received = null;
+
+    let receiver = function(depPropmise: Dependency<string>) {
+      received = depPropmise;
+    }
+
+    it("Type declarations are ok with a promise from new without generic type", () => {
+      let p = new DependencyPromise<string>((resolve, reject) => {
+        resolve("Resolved!");
+      });
+      receiver(p);
+      expect(received).toBe(p);
+    });
+
+  });
+
 });
